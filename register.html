@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firebase Authentication</title>
+    <link rel="stylesheet" href="register.css">
     <script type="module">
         // ✅ Firebase modulini import qilish
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
@@ -68,11 +69,12 @@ const firebaseConfig = {
     </script>
 </head>
 <body>
-    <h2>Ro‘yxatdan o‘tish</h2>
-    <input type="email" id="signup-email" placeholder="Email">
-    <input type="password" id="signup-password" placeholder="Parol">
-    <button onclick="register()">Ro‘yxatdan o‘tish</button>
-    <br><br>
+    <div class="container">
+        <h2>Ro‘yxatdan o‘tish</h2>
+        <input type="email" id="signup-email" placeholder="Email">
+        <input type="password" id="signup-password" placeholder="Parol">
+        <button class="kirish" onclick="register()">Ro‘yxatdan o‘tish</button>
+    </div>
     
     <!-- <h2>Tizimga kirish</h2>
     <input type="email" id="login-email" placeholder="Email">

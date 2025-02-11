@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+.container {
+    margin: auto;
+    max-width: 450px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 0 40px;
+    position: relative;
+}
+
+h2 {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.kirish {
+    margin: 5px 0 10px;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: blue;
+    color: white;
+}
+
+.kirish:hover {
+    background-color: rgb(24, 24, 208);
+}
+
+.chiqish {
+    background-color: white;
+    width: 60px;
+    border: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    font-size: 13.33333px;
+    text-align: center;
+}
+
+a:hover {
+    color: rgb(24, 24, 208);
+}
