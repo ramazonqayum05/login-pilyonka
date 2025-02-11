@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firebase Authentication</title>
-    <link rel="stylesheet" href="login.css">
     <script type="module">
         // ✅ Firebase modulini import qilish
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
@@ -27,35 +26,35 @@ const firebaseConfig = {
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
 
-        // // ✅ Ro‘yxatdan o‘tish funksiyasi
-        // window.register = async function() {
-        //     const email = document.getElementById("signup-email").value;
-        //     const password = document.getElementById("signup-password").value;
-
-        //     try {
-        //         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-        //         alert("Ro‘yxatdan muvaffaqiyatli o‘tdingiz!");
-        //         console.log("Foydalanuvchi:", userCredential.user);
-        //         window.location.href = "https://js2-ramazons-projects-915f6019.vercel.app";
-        //     } catch (error) {
-        //         alert("Xatolik: " + error.message);
-        //     }
-        // }
-
-        // ✅ Kirish funksiyasi
-        window.login = async function() {
-            const email = document.getElementById("login-email").value;
-            const password = document.getElementById("login-password").value;
+        // ✅ Ro‘yxatdan o‘tish funksiyasi
+        window.register = async function() {
+            const email = document.getElementById("signup-email").value;
+            const password = document.getElementById("signup-password").value;
 
             try {
-                const userCredential = await signInWithEmailAndPassword(auth, email, password);
-                alert("Tizimga muvaffaqiyatli kirdingiz!");
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                alert("Ro‘yxatdan muvaffaqiyatli o‘tdingiz!");
                 console.log("Foydalanuvchi:", userCredential.user);
                 window.location.href = "https://js2-ramazons-projects-915f6019.vercel.app";
             } catch (error) {
                 alert("Xatolik: " + error.message);
             }
         }
+
+        // // ✅ Kirish funksiyasi
+        // window.login = async function() {
+        //     const email = document.getElementById("login-email").value;
+        //     const password = document.getElementById("login-password").value;
+
+        //     try {
+        //         const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        //         alert("Tizimga muvaffaqiyatli kirdingiz!");
+        //         console.log("Foydalanuvchi:", userCredential.user);
+        //         window.location.href = "https://js2-ramazons-projects-915f6019.vercel.app";
+        //     } catch (error) {
+        //         alert("Xatolik: " + error.message);
+        //     }
+        // }
 
         // ✅ Chiqish funksiyasi
         window.logout = async function() {
@@ -69,14 +68,18 @@ const firebaseConfig = {
     </script>
 </head>
 <body>
-    <div class="container">
-        <h2>Tizimga kirish</h2>
-        <input type="email" id="login-email" placeholder="Email">
-        <input type="password" id="login-password" placeholder="Parol">
-        <button class="kirish" onclick="login()">Kirish</button>
-        <a href="register.html">Yangi akkaunt ochish</a>
+    <h2>Ro‘yxatdan o‘tish</h2>
+    <input type="email" id="signup-email" placeholder="Email">
+    <input type="password" id="signup-password" placeholder="Parol">
+    <button onclick="register()">Ro‘yxatdan o‘tish</button>
+    <br><br>
     
-        <button class="chiqish" onclick="logout()">Chiqish</button>
-    </div>
+    <!-- <h2>Tizimga kirish</h2>
+    <input type="email" id="login-email" placeholder="Email">
+    <input type="password" id="login-password" placeholder="Parol">
+    <button onclick="login()">Kirish</button>
+    <br><br> -->
+
+    <button onclick="logout()">Chiqish</button>
 </body>
 </html>
